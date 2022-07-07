@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;			
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+ q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	
+}
+
+
+:root{
+	--primary:rgb(33,57,106);
+	--secondary:rgb(55,182,103);
+}
+
+*::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{font-family: Arial, Helvetica, sans-serif;
+line-height: 1.5;}
+
+a{text-decoration: none;}
+
+ul li{margin-right: 32px;}
+
+/*Conatiner*/
+
+.container{max-width: 1200px;
+	width: 100%;
+margin: 0 auto;
+padding: 0 32px;
+overflow: hidden;}
+
+.btn{display: inline-block;
+padding: 12px 32px;
+letter-spacing: 0.8;
+border-radius: 2px;
+background-color: var(--secondary);
+color: #fff;
+margin-top: 20px;}
+
+/*Flex*/
+
+.flex{display: flex;
+justify-content: space-between;}
+
+.item-center{align-items: center;}
+
+.flex-48{flex: 0 1 48%;}
+
+.flex-30{flex: 0 1 31.5%;}
+
+/*Padding*/
+.padding{padding: 80px 0;}
+
+/*Width*/
+.width-full{width: 100%;}
+
+/*Custom-Resets*/
+
+.header{background-color: var(--primary);
+padding: 10px 0;}
+
+.header a{color: #fff;
+	font-size: 20px;}
+.header .active {color: var(--secondary);}
+
+/*Article*/
+.article{background-color: #e9ecfc;}
+
+.article h2{font-size: 32px;
+padding-bottom: 26px;
+font-weight: bolder;}
+
+.article p{font-size: 16px;
+	width: 90%;
+text-align: left;}
+
+.article img{height: 100%;
+	-o-object-fit: cover;
+object-fit: cover;}
+	
+/*Blog*/
+
+.blog img{height: 50%;
+	-o-object-fit: cover;
+object-fit: cover;}
+
+.blog h2{text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+margin-bottom: 26px;}
+
+.blog h3{font-size: 24px;
+font-weight: bold;}
+
+.blog p{font-size: 12px;
+color: gray;}
+
+.blog a{padding: 6px 24px;
+font-size: 20px;}
+
+/*Footer*/
+
+.footer{background-color: var(--primary);
+padding: 20px 0;}
+
+.footer a{font-size: 18px;
+	color: #fff;}
+
+/*Responsive*/
+@media screen and (max-width:768px) {
+	.flex{flex-wrap: wrap-reverse;}
+	
+	.flex-48, .flex-30{flex: 1 1 100%;
+	margin: 24px 0 ;}
+
+	.width-full{width: 88%;}
+
+.col{flex-direction: column;}
+
+.row{flex-direction: row;}
+
+.nav li{margin-left: 0;}
+
+.padding{padding: 40px 0;}
+
+
+.article p{font-size: 16px;
+	width: 85%;}
+.article a{font-size: 24px;
+padding: 10px 44px;}
+	
+.blog h2{margin-bottom: 10px;}
+
+.blog h3{font-size: 32px;}
+
+.blog p{font-size: 16px;
+width: 85%;}
+}
